@@ -74,7 +74,7 @@ function History({ settings, setSetting }) {
   const getDataTransactions = async (filter, paginationQuery) => {
     const res = await axios.get(
       `${
-        process.env.REACT_APP_ENV === 'dev'
+        process.env.REACT_APP_ENV === 'prod'
           ? `${process.env.REACT_APP_DEVELOPMENT_API}`
           : `${process.env.REACT_APP_PRODUCTION_API}`
       }/user/history`,

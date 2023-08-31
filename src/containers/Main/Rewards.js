@@ -212,20 +212,20 @@ function Rewards({ settings }) {
               <a
                 className="highlight"
                 href={`${process.env.REACT_APP_ETH_EXPLORER}/token/${
-                  process.env.REACT_APP_ENV === 'dev'
+                  process.env.REACT_APP_ENV === 'prod'
                     ? process.env.REACT_APP_TEST_STRK_TOKEN_ADDRESS
                     : process.env.REACT_APP_MAIN_STRK_TOKEN_ADDRESS
                 }`}
                 target="_blank"
                 rel="noreferrer"
               >
-                {process.env.REACT_APP_ENV === 'dev'
+                {process.env.REACT_APP_ENV === 'prod'
                   ? process.env.REACT_APP_TEST_STRK_TOKEN_ADDRESS
                   : process.env.REACT_APP_MAIN_STRK_TOKEN_ADDRESS}
               </a>
               <CopyToClipboard
                 text={
-                  process.env.REACT_APP_ENV === 'dev'
+                  process.env.REACT_APP_ENV === 'prod'
                     ? process.env.REACT_APP_TEST_STRK_TOKEN_ADDRESS
                     : process.env.REACT_APP_MAIN_STRK_TOKEN_ADDRESS
                 }

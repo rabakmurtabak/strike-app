@@ -80,7 +80,7 @@ class App extends React.Component {
                     path="/vote/address/:address"
                     component={ProposerDetail}
                   />
-                  {process.env.REACT_APP_ENV === 'dev' && (
+                  {process.env.REACT_APP_ENV === 'prod' && (
                     <Route exact path="/faucet" component={Faucet} />
                   )}
                   <Redirect from="/" to="/dashboard" />

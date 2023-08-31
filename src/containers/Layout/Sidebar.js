@@ -928,7 +928,7 @@ function Sidebar({ history, settings, setSetting, getGovernanceStrike }) {
             </NavLink>
           </>
         )}
-        {/* {process.env.REACT_APP_ENV === 'dev' && (
+        {/* {process.env.REACT_APP_ENV === 'prod' && (
           <NavLink
             className="flex flex-start align-center"
             to="/faucet"

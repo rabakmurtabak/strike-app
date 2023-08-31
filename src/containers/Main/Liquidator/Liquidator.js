@@ -160,7 +160,7 @@ function Liquidator({ settings, setSetting }) {
   const getDataUsers = async () => {
     const res = await axios.get(
       `${
-        process.env.REACT_APP_ENV === 'dev'
+        process.env.REACT_APP_ENV === 'prod'
           ? `${process.env.REACT_APP_DEVELOPMENT_API}`
           : `${process.env.REACT_APP_PRODUCTION_API}`
       }/get_liquidators`,
@@ -175,7 +175,7 @@ function Liquidator({ settings, setSetting }) {
   const getDataUsersAssets = async userAddress => {
     const res = await axios.get(
       `${
-        process.env.REACT_APP_ENV === 'dev'
+        process.env.REACT_APP_ENV === 'prod'
           ? `${process.env.REACT_APP_DEVELOPMENT_API}`
           : `${process.env.REACT_APP_PRODUCTION_API}`
       }/get_liquidator`,
@@ -192,7 +192,7 @@ function Liquidator({ settings, setSetting }) {
   const getDataUsersDetail = async (userAddress, borrowToken, seizeToken) => {
     const res = await axios.get(
       `${
-        process.env.REACT_APP_ENV === 'dev'
+        process.env.REACT_APP_ENV === 'prod'
           ? `${process.env.REACT_APP_DEVELOPMENT_API}`
           : `${process.env.REACT_APP_PRODUCTION_API}`
       }/get_liquidator_detail`,
@@ -211,7 +211,7 @@ function Liquidator({ settings, setSetting }) {
   const getCurrentBlock = async () => {
     const res = await axios.get(
       `${
-        process.env.REACT_APP_ENV === 'dev'
+        process.env.REACT_APP_ENV === 'prod'
           ? `${process.env.REACT_APP_DEVELOPMENT_API}`
           : `${process.env.REACT_APP_PRODUCTION_API}`
       }/liquidator/block_number`
@@ -393,7 +393,7 @@ function Liquidator({ settings, setSetting }) {
 
         await axios.get(
           `${
-            process.env.REACT_APP_ENV === 'dev'
+            process.env.REACT_APP_ENV === 'prod'
               ? `${process.env.REACT_APP_DEVELOPMENT_API}`
               : `${process.env.REACT_APP_PRODUCTION_API}`
           }/liquidated`,

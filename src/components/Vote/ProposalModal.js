@@ -227,7 +227,7 @@ function ProposalModal({
             let callDataTypes = [];
             targetAddresses.push(formValues[`targetAddress${i}`]);
             values.push(
-              process.env.REACT_APP_ENV === 'dev' ||
+              process.env.REACT_APP_ENV === 'prod' ||
                 formValues[`value${i}`] === ''
                 ? 0
                 : formValues[`value${i}`]
