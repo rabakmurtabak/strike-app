@@ -32,21 +32,13 @@ export const getArgs = func => {
 export const checkIsValidNetwork = async instance => {
   if (instance) {
     const netId = await instance.eth.getChainId();
-    if (netId) {
-      if (netId === 1 || netId === 5) {
-        if (netId === 5 && process.env.REACT_APP_ENV === 'dev') {
-          return false;
-        }
-        if (netId === 1 && process.env.REACT_APP_ENV === 'prod') {
-          return false;
-        }
-        return true;
-      }
-      return false;
+    if (netId === 1) {
+      return true;
     }
   }
   return false;
 };
+
 
 export const addToken = async (asset, decimal, type) => {
   let tokenAddress = '';
