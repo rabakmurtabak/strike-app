@@ -78,10 +78,10 @@ function ConnectButton({ history, settings, setSetting, getGovernanceStrike }) {
     setSetting({
       accountLoading: true
     });
-  
+
     if (netId) {
       if (netId === 1) {
-          // Check for network ID 1 (Ethereum mainnet)
+      // Check for network ID 1 (Ethereum mainnet)
         setSetting({
           accountLoading: false
         });
@@ -99,7 +99,7 @@ function ConnectButton({ history, settings, setSetting, getGovernanceStrike }) {
     );
     return Promise.race([promise, sleep]);
   };
-  
+
   const handleMetamaskWatch = useCallback(async () => {
     const provider = getProvider('metamask');
     if (provider) {
