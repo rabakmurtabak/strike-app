@@ -75,7 +75,6 @@ function ConnectButton({ history, settings, setSetting, getGovernanceStrike }) {
   const checkNetwork = async provider => {
     const web3 = new Web3(provider);
     const netId = await web3.eth.getChainId();
-    
     setSetting({
       accountLoading: true
     });
@@ -83,6 +82,7 @@ function ConnectButton({ history, settings, setSetting, getGovernanceStrike }) {
     if (netId) {
       if (netId === 1) {  // Check for network ID 1 (Ethereum mainnet)
         setSetting({
+      
           accountLoading: false
         });
       } else {
@@ -92,7 +92,6 @@ function ConnectButton({ history, settings, setSetting, getGovernanceStrike }) {
       }
     }
   };
-  
   const withTimeoutRejection = async (promise, timeout) => {
     const sleep = new Promise((resolve, reject) =>
       setTimeout(() => reject(new Error(constants.TIMEOUT)), timeout)
