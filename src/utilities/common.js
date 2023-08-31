@@ -34,10 +34,10 @@ export const checkIsValidNetwork = async instance => {
     const netId = await instance.eth.getChainId();
     if (netId) {
       if (netId === 1 || netId === 5) {
-        if (netId === 5 && process.env.REACT_APP_ENV === 'prod') {
+        if (netId === 5 && process.env.REACT_APP_ENV === 'dev') {
           return false;
         }
-        if (netId === 1 && process.env.REACT_APP_ENV === 'dev') {
+        if (netId === 1 && process.env.REACT_APP_ENV === 'prod') {
           return false;
         }
         return true;
