@@ -81,7 +81,6 @@ function ConnectButton({ history, settings, setSetting, getGovernanceStrike }) {
 
     if (netId) {
       if (netId === 1) {
-      // Check for network ID 1 (Ethereum mainnet)
         setSetting({
           accountLoading: false
         });
