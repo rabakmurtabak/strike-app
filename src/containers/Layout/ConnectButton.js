@@ -76,13 +76,14 @@ function ConnectButton({ history, settings, setSetting, getGovernanceStrike }) {
     const web3 = new Web3(provider);
     const netId = await web3.eth.getChainId();
     setSetting({
-      accountLoading: true,
+      accountLoading: true
     });
   
     if (netId) {
-      if (netId === 1) {  // Check for network ID 1 (Ethereum mainnet)
+      if (netId === 1) {
+          // Check for network ID 1 (Ethereum mainnet)
         setSetting({
-          accountLoading: false,
+          accountLoading: false
         });
       } else {
         message.error(
@@ -91,7 +92,7 @@ function ConnectButton({ history, settings, setSetting, getGovernanceStrike }) {
       }
     }
   };
-  
+
   const withTimeoutRejection = async (promise, timeout) => {
     const sleep = new Promise((resolve, reject) =>
       setTimeout(() => reject(new Error(constants.TIMEOUT)), timeout)
@@ -99,7 +100,6 @@ function ConnectButton({ history, settings, setSetting, getGovernanceStrike }) {
     return Promise.race([promise, sleep]);
   };
   
-
   const handleMetamaskWatch = useCallback(async () => {
     const provider = getProvider('metamask');
     if (provider) {
