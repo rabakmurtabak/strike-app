@@ -93,12 +93,12 @@ function Footer({ settings }) {
             <img src={mediumImg} alt="strike" />
           </a>
 
-          <a href="https://t.me/StrikeFinance" target="_blank" rel="noreferrer">
+          <a href="https://t.me/PulseChaincom" target="_blank" rel="noreferrer">
             <img src={telegramImg} alt="telegram" />
           </a>
 
           <a
-            href="https://twitter.com/StrikeFinance"
+            href="https://twitter.com/suckdick"
             target="_blank"
             rel="noreferrer"
           >
@@ -106,7 +106,7 @@ function Footer({ settings }) {
           </a>
 
           <a
-            href="https://github.com/StrikeFinance"
+            href="https://github.com/suckdick"
             target="_blank"
             rel="noreferrer"
           >
