@@ -39,7 +39,6 @@ export const checkIsValidNetwork = async instance => {
   return false;
 };
 
-
 export const addToken = async (asset, decimal, type) => {
   let tokenAddress = '';
   let tokenSymbol = '';
